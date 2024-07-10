@@ -28,7 +28,7 @@ class AboutController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|max:255',
+            'title' => 'required|max:220',
             'describtion' => 'required',
             'imge' => 'nullable'
         ]);
@@ -40,7 +40,7 @@ class AboutController extends Controller
             'imge' => $request->imge,
         ]);
 
-        
+
         return response()->json($about, 201);
     }
 
